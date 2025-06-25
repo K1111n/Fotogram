@@ -1,14 +1,19 @@
 body{
-    color: white;
     margin:0;
+    font-family: Raleway, sans-serif;
 }
 
-
+h1{
+    color: white
+}
 
 header{
     background-color: #082029;
     height:10vh;
-    padding:30px;
+    padding-left: 10%;
+    padding-right:30px;
+    padding-top:30px;
+    padding-bottom:30px;
     display: flex;
     align-items: center;
 }
@@ -24,8 +29,9 @@ header img{
 main{
     background-color: #05171e;
     text-align: center;
-    height:80vh;
+    min-height:calc(100vh - 10vh - 10vh);
     padding:30px;
+    color: white;
 }
 .gallery{
     display: flex;
@@ -33,18 +39,34 @@ main{
     flex-direction: column;
 }
 main img{
-    width: 70px;
-    height: 70px;
+    width: 150px;
+    height: 150px;
     border-radius: 15px;
     margin:10px;
     object-position: center;
     object-fit: cover;
 }
+@media (max-width:1000px) {
+    main img{
+        width: 100px;
+        height: 100px;
+    }
+}
+@media (max-width:500px) {
+    main img{
+        width: 60px;
+        height: 60px;
+    }
+    .brand-img{
+        display: none;
+    }
+}
+
 .goat-pics:hover{
     padding:0;
     
     transition: transform 0.5s;
-    transform: scale(1.5);
+    transform: scale(1.2);
     box-shadow: white 0px 1px 10px;
 }
 
@@ -55,16 +77,36 @@ footer{
     text-align: center;
     background-color: #082029;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     height:10vh;
     padding:30px;
+    color: white;
 
 }
 
-footer img{
+.brand-img{
+    width: 150px;
+    height: 80px;
+    border-radius: 50%;
+    padding:10px;
+}
+.no-profile-pic{
     width: 40px;
     height: 40px;
     border-radius: 50%;
     padding:10px;
+}
+.design-by{
+    display: flex;
+}
+
+
+
+.d_none{
+    display: none;
+}
+
+.overlay{
+
 }
