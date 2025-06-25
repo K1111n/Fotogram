@@ -1,0 +1,69 @@
+body{
+    color: white;
+    margin:0;
+}
+
+
+
+header{
+    background-color: #082029;
+    height:10vh;
+    padding:30px;
+    display: flex;
+    align-items: center;
+}
+header img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    padding:10px;
+}
+
+
+
+main{
+    background-color: #05171e;
+    text-align: center;
+    height:80vh;
+    padding:30px;
+}
+.gallery{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+main img{
+    width: 70px;
+    height: 70px;
+    border-radius: 15px;
+    margin:10px;
+    object-position: center;
+    object-fit: cover;
+}
+.goat-pics:hover{
+    padding:0;
+    transform: scale (2.2);
+    transition: transform 0.5s;
+    box-shadow: white 0px 1px 10px;
+}
+
+
+
+
+footer{
+    text-align: center;
+    background-color: #082029;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:10vh;
+    padding:30px;
+
+}
+
+footer img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    padding:10px;
+}

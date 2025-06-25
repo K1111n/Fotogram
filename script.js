@@ -1,0 +1,2 @@
+let prevbutton;
+let nextbutton;
