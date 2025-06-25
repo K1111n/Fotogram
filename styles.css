@@ -42,8 +42,9 @@ main img{
 }
 .goat-pics:hover{
     padding:0;
-    transform: scale (2.2);
+    
     transition: transform 0.5s;
+    transform: scale(1.5);
     box-shadow: white 0px 1px 10px;
 }
 
