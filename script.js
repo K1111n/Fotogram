@@ -24,35 +24,27 @@ let myImgs = ["/img/goats1.jpg",
      "/img/goats11.jpg", 
      "/img/goats12.jpg"];
 
-    let gallery = document.getElementById("gallery");
     
+    function render() {
+      let gallery = document.getElementById("gallery");
     for(let i=0; i < myImgs.length; i++) {
-      gallery.innerHTML += `<img onclick="toggleOverlay(i)" src="${myImgs[i]}" alt="goat" class="goat-pics">`
+      gallery.innerHTML += `<img onclick="toggleDialog(${i})" src="${myImgs[i]}" alt="goat" class="goat-pics">`
+      let currentValue = i;
+    }
     }
 
-
+     function toggleDialog(i) {
+          let dialogRef = document.getElementById("content");
+          dialogRef.classList.toggle("d_none");
+          dialogRef.classList.add("overlay");
+          dialogRef.innerHTML = `
+           <div class="close"><img onclick="toggleDialog()" src="/close_btn.png"></div>
+           <p>${myImgsNames[i]}</p>
+           <img src="${myImgs[i]}" alt="goat">
+           <div class="buttons">
+            <img onclick="toggleDialog(currentValue - 1)" src="/left_btn.png">
+            <img onclick="toggleDialog(currentValue + 1)" src="/right_btn.png">
+          </div>
+           `
+     }
  
-   //   function renderFiltered(index){
-
-   //          render(myImgsNames[index], myImgs[index])
-
-   //   }
-
-   //   function render(arrDescription, arrTitles) {
-   //      let contentRef = document.getElementById("content");
-   //      contentRef.innerHTML = "";
-   //      for (let index = 0; index < arrTitles.length; index++) {
-   //          contentRef.innerHTML += getNotesHtml(index, arrTitles, arrDescription);
-   //      }
-   //   }
-
-
-   //   function getNotesHtml(index) {
-   //      return `<p>${myImgsNames[index]}</p>
-   //      <img src="${myImgs[index]}" alt="goat">`
-   //   }
-
-      // function toggleOverlay(index) {
-      //    let overlayRef = document.getElementById("overlay");
-      //    overlayRef.classList.toggle("d_none");
-      // }

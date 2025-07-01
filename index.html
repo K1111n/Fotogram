@@ -7,14 +7,14 @@
     <link rel="icon" type="image/x-icon" href="favicon.svg" />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
+  <body onload="render()">
     <header>
       <img src="favicon.png" alt="logo" />
       <h1>Goatgram</h1>
     </header>
 
     <main>
-      <div id="content" class="overlay d_none"></div>
+      <dialog open id="content" class="d_none overlay"></dialog>
       <h2>Click on any picture to open the gallery</h2>
       <section class="gallery" id="gallery"></section>
     </main>
