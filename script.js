@@ -42,7 +42,7 @@ let myImgs = ["/img/goats1.jpg",
     function offDialog(event) {
         let dialogRef = document.getElementById("content");
         dialogRef.classList.add("d_none");
-      event.stopPropagation();
+        event.stopPropagation();
     }
 
     function addDialog(event) {
