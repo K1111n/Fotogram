@@ -2,10 +2,11 @@ body{
     margin:0;
     font-family: Raleway, sans-serif;
     z-index: 0;
+    max-width: 1920px;
 }
 
 h1{
-    color: white
+    color: white;
 }
 h2{
     font-size: 2rem;
@@ -14,9 +15,9 @@ h2{
 header{
     background-color: #082029;
     height:10vh;
-    padding:30px 2rem;
     display: flex;
-    align-items: center;
+    align-items: center;    
+    justify-content: center;
 }
 header img{
     width: 40px;
@@ -50,22 +51,29 @@ main img{
     object-position: center;
     object-fit: cover;
 }
-@media (max-width:1000px) {
-    main img{
+@media (max-width:700px) {
+     main img{
         width: 100px;
         height: 100px;
     }
 }
-@media (max-width:500px) {
+@media (max-width:400px) {
+    h2{
+        font-size: 1.1rem;
+    }
     main img{
-        width: 60px;
-        height: 60px;
+        width: 80px;
+        height: 80px;
+    } 
+    #content{
+    width: 220px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.7rem;
     }
-    .brand-img{
-        display: none;
-    }
-    footer{
-        padding:0;
+    .buttons{
+        gap: 30px;
     }
 }
 
@@ -81,13 +89,11 @@ main img{
 
 
 footer{
-    text-align: center;
     background-color: #082029;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: center;
     height:10vh;
-    padding:30px 2rem;
     color: white;
     position:fixed;
     bottom:0;
@@ -145,6 +151,8 @@ footer{
 .close{
     display: flex;
     justify-content: flex-end;
+    align-items: center;
+    gap:20px;
     height: max-content;
 }
 .close img{
