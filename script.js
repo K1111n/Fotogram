@@ -27,24 +27,64 @@ let myImgs = ["/img/goats1.jpg",
     
     function render() {
       let gallery = document.getElementById("gallery");
-    for(let i=0; i < myImgs.length; i++) {
-      gallery.innerHTML += `<img onclick="toggleDialog(${i})" src="${myImgs[i]}" alt="goat" class="goat-pics">`
-      let currentValue = i;
+      for(let index=0; index < myImgs.length; index++) {
+      gallery.innerHTML += `<img onclick="toggleDialog(${index}); addDialog(event)" src="${myImgs[index]}" alt="goat" class="goat-pics">`
     }
     }
 
-     function toggleDialog(i) {
+
+     function toggleDialog(index) {
           let dialogRef = document.getElementById("content");
           dialogRef.classList.toggle("d_none");
           dialogRef.classList.add("overlay");
+          renderFiltered(index);
+        }
+
+    function offDialog(event) {
+        let dialogRef = document.getElementById("content");
+        dialogRef.classList.add("d_none");
+      event.stopPropagation();
+    }
+
+    function addDialog(event) {
+      let dialogRef = document.getElementById("content");
+      dialogRef.classList.remove("d_none");
+      event.stopPropagation();
+    }
+
+      function renderFiltered(index) {
+        let dialogRef = document.getElementById("content");
           dialogRef.innerHTML = `
-           <div class="close"><img onclick="toggleDialog()" src="/close_btn.png"></div>
-           <p>${myImgsNames[i]}</p>
-           <img src="${myImgs[i]}" alt="goat">
+           <div class="close"><img onclick="offDialog(event)" src="/close_btn.png"></div>
+           <p>${myImgsNames[index]}</p>
+           <img src="${myImgs[index]}" alt="goat">
            <div class="buttons">
-            <img onclick="toggleDialog(currentValue - 1)" src="/left_btn.png">
-            <img onclick="toggleDialog(currentValue + 1)" src="/right_btn.png">
+            <img onclick="previousBtn(${index})" src="/left_btn.png">
+            <img onclick="nextBtn(${index})" src="/right_btn.png">
           </div>
            `
      }
  
+     function previousBtn(index) {
+      
+          if (index == 0) {
+            index = 11;
+          }
+          else {
+            index--;
+          }
+          console.log(index);
+         renderFiltered(index);
+     }
+
+     function nextBtn(index) {
+      
+          if (index == 11) {
+            index = 0;
+          }
+          else {
+            index++;
+          }
+          console.log(index);
+         renderFiltered(index);
+     }

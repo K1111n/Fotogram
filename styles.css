@@ -1,10 +1,14 @@
 body{
     margin:0;
     font-family: Raleway, sans-serif;
+    z-index: 0;
 }
 
 h1{
     color: white
+}
+h2{
+    font-size: 2rem;
 }
 
 header{
@@ -118,6 +122,7 @@ footer{
     background-color: #082029;
     color:white;
     font-size: 2rem;
+    z-index: 1;
 }
 .overlay img{
     width: 270px;
