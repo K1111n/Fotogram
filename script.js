@@ -72,7 +72,6 @@ let myImgs = ["/img/goats1.jpg",
           else {
             index--;
           }
-          console.log(index);
          renderFiltered(index);
      }
 
@@ -84,6 +83,5 @@ let myImgs = ["/img/goats1.jpg",
           else {
             index++;
           }
-          console.log(index);
          renderFiltered(index);
      }

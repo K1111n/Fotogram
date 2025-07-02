@@ -14,10 +14,7 @@ h2{
 header{
     background-color: #082029;
     height:10vh;
-    padding-left: 10%;
-    padding-right:30px;
-    padding-top:30px;
-    padding-bottom:30px;
+    padding:30px 2rem;
     display: flex;
     align-items: center;
 }
@@ -67,14 +64,17 @@ main img{
     .brand-img{
         display: none;
     }
+    footer{
+        padding:0;
+    }
 }
 
 .goat-pics:hover{
     padding:0;
-    
     transition: transform 0.5s;
     transform: scale(1.2);
     box-shadow: white 0px 1px 10px;
+    cursor: pointer;
 }
 
 
@@ -84,14 +84,15 @@ footer{
     text-align: center;
     background-color: #082029;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     height:10vh;
-    padding:30px;
+    padding:30px 2rem;
     color: white;
     position:fixed;
     bottom:0;
     width: 100%;
+    max-width: 1920px;
 }
 
 .brand-img{
@@ -138,6 +139,9 @@ footer{
     width: 50px;
     height: 50px;
 }
+.buttons img:hover{    
+    cursor: pointer;
+}
 .close{
     display: flex;
     justify-content: flex-end;
@@ -146,4 +150,8 @@ footer{
 .close img{
     width: 30px;
     height: 30px;
+}
+.close img:hover{
+    box-shadow: white 0px 1px 10px;
+    cursor: pointer;
 }
