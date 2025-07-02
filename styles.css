@@ -90,7 +90,9 @@ footer{
     height:10vh;
     padding:30px;
     color: white;
-
+    position:fixed;
+    bottom:0;
+    width: 100%;
 }
 
 .brand-img{

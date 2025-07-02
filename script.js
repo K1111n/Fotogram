@@ -32,7 +32,6 @@ let myImgs = ["/img/goats1.jpg",
     }
     }
 
-
      function toggleDialog(index) {
           let dialogRef = document.getElementById("content");
           dialogRef.classList.toggle("d_none");
