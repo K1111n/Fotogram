@@ -34,11 +34,10 @@ main{
     background-color: #05171e;
     text-align: center;
     min-height:calc(100vh - 10vh - 10vh);
-    padding:30px;
+    padding:10px;
     color: white;
     display: flex;
     flex-direction: column;
-    justify-content: center;
 }
 .gallery{
     display: flex;
