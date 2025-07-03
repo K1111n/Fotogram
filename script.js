@@ -31,7 +31,7 @@ let myImgs = [
 function render() {
   let gallery = document.getElementById("gallery");
   for (let index = 0; index < myImgs.length; index++) {
-    gallery.innerHTML += `<img onclick="toggleDialog(${index}); addDialog(event)" src="${myImgs[index]}" alt="goat" class="goat-pics">`;
+    gallery.innerHTML += `<img onclick="toggleDialog(${index}); dontcloseDialog(event)" src="${myImgs[index]}" alt="goat" class="goat-pics">`;
   }
 }
 
@@ -41,13 +41,13 @@ function toggleDialog(index) {
   renderFiltered(index);
 }
 
-function offDialog(event) {
+function closeDialogbyPressingCloseOrBody(event) {
   let dialogRef = document.getElementById("content");
   dialogRef.classList.add("d_none");
   event.stopPropagation();
 }
 
-function addDialog(event) {
+function dontcloseDialog(event) {
   let dialogRef = document.getElementById("content");
   dialogRef.classList.remove("d_none");
   event.stopPropagation();
@@ -57,7 +57,7 @@ function renderFiltered(index) {
   let dialogRef = document.getElementById("content");
   dialogRef.innerHTML = `
           <div class="close">
-            <img onclick="offDialog(event)" src="/close_btn.png">
+            <img onclick="closeDialogbyPressingCloseOrBody(event)" src="/close_btn.png">
           </div>
           <p>${myImgsNames[index]}</p>
           <img src="${myImgs[index]}" alt="goat">
