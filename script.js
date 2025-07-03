@@ -1,16 +1,16 @@
 let myImgsNames = [
-  "First Goat",
-  "Second Goat",
-  "Third Goat",
-  "Fourth Goat",
-  "Fifth Goat",
-  "Sixth Goat",
-  "Seventh Goat",
-  "Eighth Goat",
-  "Ninth Goat",
-  "Tenth Goat",
-  "Eleventh Goat",
-  "Twelfth Goat",
+  "1st Goat",
+  "2nd Goat",
+  "3rd Goat",
+  "4th Goat",
+  "5th Goat",
+  "6th Goat",
+  "7th Goat",
+  "8th Goat",
+  "9th Goat",
+  "10th Goat",
+  "11th Goat",
+  "12th Goat",
 ];
 
 let myImgs = [

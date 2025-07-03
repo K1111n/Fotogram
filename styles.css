@@ -51,32 +51,6 @@ main img{
     object-position: center;
     object-fit: cover;
 }
-@media (max-width:700px) {
-     main img{
-        width: 100px;
-        height: 100px;
-    }
-}
-@media (max-width:400px) {
-    h2{
-        font-size: 1.1rem;
-    }
-    main img{
-        width: 80px;
-        height: 80px;
-    } 
-    #content{
-    width: 220px; 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 1.7rem;
-    }
-    .buttons{
-        gap: 30px;
-    }
-}
-
 .goat-pics:hover{
     padding:0;
     transition: transform 0.5s;
@@ -124,8 +98,8 @@ footer{
 }
 
 .overlay{
-    width:300px;
-    height: 550px;
+    width:320px;
+    height: 580px;
     border-radius: 10px;
     background-color: #082029;
     color:white;
@@ -133,8 +107,8 @@ footer{
     z-index: 1;
 }
 .overlay img{
-    width: 270px;
-    height: 270px;
+    width: 300px;
+    height: 330px;
     border-radius: 15px;
 }
 .buttons{
@@ -162,4 +136,38 @@ footer{
 .close img:hover{
     box-shadow: white 0px 1px 10px;
     cursor: pointer;
+}
+
+@media (max-width:700px) {
+     main img{
+        width: 100px;
+        height: 100px;
+    }
+}
+@media (max-width:400px) {
+    h2{
+        font-size: 1.1rem;
+    }
+    main img{
+        width: 80px;
+        height: 80px;
+    } 
+     #content{
+        width: 220px;
+        height: 500px; 
+        /* display: flex;
+        flex-direction: column;
+        align-items: center; */ */
+        font-size: 1.7rem;
+    }
+    .overlay img{
+        width: 200px;
+        height: 230px;
+        border-radius: 15px;
+    }
+    .buttons img, .close img{
+        gap: 150px;
+        width: 50px;
+        height: 50px;
+    } 
 }
