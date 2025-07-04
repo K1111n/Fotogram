@@ -63,6 +63,7 @@ function renderFiltered(index) {
           <img src="${myImgs[index]}" alt="goat">
           <div class="buttons">
             <img onclick="previousBtn(${index})" src="/left_btn.png">
+            <button onclick="diashow(${index})" id="diashow-btn")">Diashow</button>
             <img onclick="nextBtn(${index})" src="/right_btn.png">
           </div>
            `;
@@ -86,4 +87,23 @@ function nextBtn(index) {
     index++;
   }
   renderFiltered(index);
+}
+
+let diashowOn = false;
+let currentIndex = index;
+function diashow(index) {
+  if (diashowOn == false) {
+    let lastindex = myImgs.length - 1;
+    if (index == lastindex) {
+      index = 0;
+    } else {
+      index++;
+    }
+    renderFiltered(index);
+    setInterval(() => diashow(index), 1000);
+  }
+}
+
+function diashowStop() {
+  diashowOn = true;
 }

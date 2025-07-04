@@ -178,3 +178,13 @@ footer{
 .display_none_dialog{
     display: none;
 }}
+
+
+#diashow-btn{
+    border-radius: 10px;
+    background-color: green;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-weight: bold;
+    color: white;
+}
